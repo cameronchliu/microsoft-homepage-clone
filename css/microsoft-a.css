@@ -167,13 +167,14 @@ nav ul.func-menu .dropdown-menu {
     transform: translateX(-50%);
 
     display: none;
-    z-index: 1;
+    z-index: 9;
 }
 
 nav ul.func-menu .dropdown-menu .menu-top {
     background: #f2f2f2;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 40px;
 }
 
 nav ul.func-menu .dropdown-menu .menu-top ul {
