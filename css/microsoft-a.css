@@ -68,6 +68,15 @@ nav ul {
     height: 100%;
 }
 
+nav ul li a:focus {
+    outline: 1px dashed black;
+    outline-offset: -3px;
+}
+
+nav ul li a span:hover,
+nav ul a:focus span {
+    border-bottom: 2px solid black;
+}
 
 .logo {
     height: 100%;
@@ -75,6 +84,11 @@ nav ul {
     justify-content: start;
     align-items: center;
     margin-right: 40px;
+}
+
+.logo a:focus {
+    outline: 1px dashed black;
+    outline-offset: 12px;
 }
 
 @media (max-width:860px) {
@@ -111,6 +125,11 @@ nav ul.func-menu {
     justify-content: end;
 }
 
+nav ul.func-menu li label span:hover {
+    border-bottom: 2px solid black;
+}
+
+
 nav ul.func-menu .all-mis-label {
     display: inline-block;
     width: 100%;
@@ -120,6 +139,8 @@ nav ul.func-menu .all-mis-label {
 
 nav ul.func-menu #all-mis-switch:checked+label {
     background: #f2f2f2;
+    outline: 1px dashed black;
+    outline-offset: -4px;
 }
 
 nav ul.func-menu #all-mis-switch:checked~.dropdown-menu {
@@ -129,10 +150,11 @@ nav ul.func-menu #all-mis-switch:checked~.dropdown-menu {
 nav ul.func-menu .dropdown-menu {
     background: #f2f2f2;
     width: 100%;
+    border-bottom: 2px solid black;
 
     position: absolute;
     left: 50%;
-    top: 90%;
+    top: 95%;
     transform: translateX(-50%);
 
     display: none;
@@ -153,7 +175,7 @@ nav ul.func-menu .dropdown-menu .menu-top ul {
 }
 
 
-nav ul.func-menu .dropdown-menu .menu-top ul li {
+nav ul.func-menu .dropdown-menu .menu-top li {
     padding: 2px;
 }
 
@@ -161,14 +183,13 @@ nav ul.func-menu .dropdown-menu .menu-top ul li a {
     padding: 10px 8px;
 }
 
-nav ul.func-menu .dropdown-menu .menu-top ul li a:focus {
-    outline: 1px dashed black;
-    outline-offset: 0px;
-}
-
 nav ul.func-menu .dropdown-menu .menu-top ul li a span:hover,
 nav ul.func-menu .dropdown-menu .menu-top a:focus span {
     border-bottom: 1px solid black;
+}
+
+nav ul.func-menu .dropdown-menu .menu-top h4 {
+    padding-left: 8px;
 }
 
 nav ul.func-menu .dropdown-menu .menu-bottom {
@@ -179,6 +200,19 @@ nav ul.func-menu .dropdown-menu .menu-bottom {
     width: 100%;
     align-items: center;
 }
+
+nav ul.func-menu li.all-mis .overlay {
+    display: none;
+}
+
+nav ul.func-menu #all-mis-switch:checked~.overlay {
+    display: block;
+    background: transparent;
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+}
+
 
 @media (max-width:1400px) {
     nav ul.func-menu .dropdown-menu {
