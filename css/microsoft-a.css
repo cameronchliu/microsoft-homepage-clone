@@ -233,14 +233,9 @@ nav ul.func-menu .dropdown-menu .menu-bottom {
 }
 
 header {
-    background-color: darkgray;
     position: relative;
 }
 
-
-main {
-    /* background-color: dimgrey; */
-}
 
 main section {
     margin: 90px 0px;
