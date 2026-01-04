@@ -22,13 +22,7 @@ body {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    height: 100%;
-    width: 100%;
-    display: flex;
+    list-style-type: none;
 }
 
 ul li a {
@@ -36,19 +30,6 @@ ul li a {
     height: 100%;
     padding: 20px 8px 17px;
     display: inline-block;
-}
-
-ul li:hover span {
-    border-bottom: 2px solid black;
-}
-
-ul li a:focus {
-    outline: 1.5px dashed black;
-    outline-offset: -5px;
-}
-
-ul li a:focus span {
-    border-bottom: 2px solid black;
 }
 
 .container-normal {
@@ -78,6 +59,16 @@ nav {
     position: relative;
 }
 
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+
 .logo {
     height: 100%;
     display: flex;
@@ -103,6 +94,7 @@ nav {
 
 nav ul.pc-menu {
     width: 800px;
+    min-width: 370px;
 }
 
 @media (max-width:860px) {
@@ -111,35 +103,13 @@ nav ul.pc-menu {
     }
 }
 
-nav ul.pc-menu .more {
-    display: none;
-}
-
-/* ❌這邊有問題，a消除不了 */
-/* @media (max-width:860px) {
-    nav ul.pc-menu span.hide-text {
-        display: none;
-    }
-}
-
-@media (max-width:860px) {
-    nav ul.pc-menu span.more {
-        display: inline-block;
-    }
-} */
-
-
-
-
 nav ul.func-menu {
-    min-width: 350px;
+    min-width: 325px;
     width: 400px;
-    /* background-color: chocolate; */
+
     flex: 1;
     justify-content: end;
 }
-
-
 
 nav ul.func-menu .all-mis-label {
     display: inline-block;
@@ -153,13 +123,12 @@ nav ul.func-menu #all-mis-switch:checked+label {
 }
 
 nav ul.func-menu #all-mis-switch:checked~.dropdown-menu {
-    /* background-color: aqua; */
     display: block;
 }
 
 nav ul.func-menu .dropdown-menu {
     background: #f2f2f2;
-    width: 95%;
+    width: 100%;
 
     position: absolute;
     left: 50%;
@@ -174,7 +143,7 @@ nav ul.func-menu .dropdown-menu .menu-top {
     background: #f2f2f2;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 40px;
+    padding-left: 25px;
 }
 
 nav ul.func-menu .dropdown-menu .menu-top ul {
@@ -189,17 +158,12 @@ nav ul.func-menu .dropdown-menu .menu-top ul li {
 }
 
 nav ul.func-menu .dropdown-menu .menu-top ul li a {
-    /* background-color: cadetblue; */
     padding: 10px 8px;
-}
-
-nav ul.func-menu .dropdown-menu ul li a span {
-    border: none;
 }
 
 nav ul.func-menu .dropdown-menu .menu-top ul li a:focus {
     outline: 1px dashed black;
-    outline-offset: -5px;
+    outline-offset: 0px;
 }
 
 nav ul.func-menu .dropdown-menu .menu-top ul li a span:hover,
@@ -217,8 +181,18 @@ nav ul.func-menu .dropdown-menu .menu-bottom {
 }
 
 @media (max-width:1400px) {
+    nav ul.func-menu .dropdown-menu {
+        max-width: 980px;
+    }
+
     nav ul.func-menu .hide-text {
         display: none;
+    }
+}
+
+@media (max-width:1083px) {
+    nav ul.func-menu .dropdown-menu {
+        max-width: 750px;
     }
 }
 
@@ -231,6 +205,8 @@ nav ul.func-menu .dropdown-menu .menu-bottom {
         margin-right: auto;
     }
 }
+
+/* -------------------- header ------------------- */
 
 header {
     position: relative;
