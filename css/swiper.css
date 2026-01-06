@@ -25,7 +25,7 @@
 
      .mySwiper .swiper-button-next,
      .mySwiper .swiper-button-prev {
-       top: calc(100% - 25px);
+       top: calc(100% - 18px);
        color: black;
        z-index: 15;
        --swiper-navigation-size: 16px;
@@ -54,19 +54,19 @@
 
      .stop {
        position: absolute;
-       top: 94%;
-       left: 45%;
+       top: 94.5%;
+       left: calc(45% - 60px);
        cursor: pointer;
        z-index: 19;
      }
 
-  
+
      .play {
        width: 20px;
        height: 20px;
        position: absolute;
-       top: 94%;
-       left: 45%;
+       top: 94.5%;
+       left: calc(45% - 60px);
        cursor: pointer;
        z-index: 19;
      }

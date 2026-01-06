@@ -215,7 +215,9 @@
     <header class="container-full">
         <!-- 頁首(banner)=輪播 -->
         <!-- Swiper -->
+
         <div class="swiper mySwiper">
+
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
@@ -240,6 +242,15 @@
                     </picture>
                 </div>
 
+            </div>
+
+            <div class="hero-content-card">
+                <h1>Microsoft 365</h1>
+                <p>推出 Microsoft 365 進階版，此版本具有最高的用量限制和針對 AI 進階使用者的獨特 Copilot 功能。</p>
+                <div class="card-buttons">
+                    <a href="#" class="btn-primary">探索 Microsoft 365 進階版</a>
+                    <a href="#" class="btn-link">查看其他 Microsoft 365 選項 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
             </div>
 
             <div class="stop"><i class="fa-regular fa-circle-play"></i></div>
@@ -413,7 +424,9 @@
 
         </section>
 
-        <div class="go-top">回到首頁</div>
+        <div class="sticky-area">
+            <div class="go-top">🔝 回到首頁</div>
+        </div>
 
     </main>
 
@@ -514,7 +527,7 @@
     <!-- Initialize Swiper -->
     <script>
         const swiper = new Swiper(".mySwiper", {
-            autoplay:true,
+            autoplay: true,
             loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -528,7 +541,7 @@
 
         const stopBtn = document.querySelector('.stop');
         const playBtn = document.querySelector('.play');
-        
+
         playBtn.style.display = 'none';
         stopBtn.addEventListener('click', () => {
             swiper.autoplay.stop();

@@ -260,6 +260,73 @@ main section {
     margin: 90px 0px;
 }
 
+/* 1. 卡片主體定位 */
+.hero-content-card {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* 控制距離左邊的距離 */
+    transform: translateY(-50%);
+    z-index: 10;
+    /* 確保在圖片上方 */
+
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 微透明背景感 */
+    padding: 48px;
+    max-width: 440px;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgba(0, 0, 0, 0.13);
+}
+
+/* 2. 內容文字樣式 */
+.hero-content-card h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.hero-content-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* 3. 按鈕樣式 */
+.hero-content-card .btn-primary {
+    background-color: #0067b8;
+    color: white;
+    padding: 10px 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.hero-content-card .btn-link {
+    display: block;
+    color: #0067b8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-content-card .btn-link:hover {
+    text-decoration: underline;
+}
+
+/* 4. 響應式處理（非常重要） */
+@media (max-width: 860px) {
+
+    /* 在平板或手機上，通常會讓卡片橫跨 100% 或置中 */
+    .hero-content-card {
+        position: static;
+        /* 取消絕對定位 */
+        transform: none;
+        max-width: 100%;
+        padding: 30px 15px;
+        background-color: #f2f2f2;
+        /* 與微軟官方風格一致，手機版文字排在圖下 */
+        box-shadow: none;
+    }
+}
+
 section.three-choice {
     display: flex;
     justify-content: center;
@@ -418,16 +485,21 @@ section.four-card .one-card .card-footer .card-btn-2 a:focus {
 section.big-img {
     background-color: darkslategray;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 section.big-img .big-img-all-text {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 8%;
     transform: translateY(-50%);
-    text-align: center;
-    color: black;
-    font-size: 1rem;
+
+    background-color: white;
+    padding: 40px;
+    max-width: 440px;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgba(0, 0, 0, 0.13);
+    z-index: 5;
 }
 
 section.big-img .big-img-all-text .to-left {
@@ -437,8 +509,30 @@ section.big-img .big-img-all-text .to-left {
 }
 
 section.big-img .big-img-all-text .line-1 {
-    font-size: 1.8125rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+section.big-img .big-img-all-text .line-2 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 860px) {
+    section.big-img .big-img-all-text {
+        position: static;
+        /* 取消浮動 */
+        transform: none;
+        /* 取消垂直位移 */
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 20px;
+        background-color: #f2f2f2;
+        box-shadow: none;
+        /* 手機版通常不帶陰影 */
+    }
 }
 
 section.big-img .big-img-all-text .blue-button a {
@@ -482,16 +576,25 @@ section.others .attention a:focus span {
     outline-offset: 4px;
 }
 
-
-
+.sticky-area {
+    /* background-color: pink; */
+    width: 130px;
+    height: 1450px;
+    position: absolute;
+    top: 170%;
+    right:50px;
+}
 
 .go-top {
-    position: fixed;
-    bottom: 300px;
-    right: 100px;
-    background-color: black;
-    color: white;
+text-align: center;
+font-weight: bold;
+    position: sticky;
+    background-color: #d9d9d9;
+    color: black;
     padding: 10px;
+    position: sticky;
+    top: calc(100vh - 100px);
+    right: 100px;
 }
 
 footer {
@@ -597,6 +700,14 @@ footer .footer-nav .footer-nav-right {
     display: flex;
     margin-top: auto;
 
+}
+
+footer .footer-nav .footer-nav-right ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
 }
 
 footer .footer-nav .footer-nav-right ul li {
