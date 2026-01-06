@@ -201,6 +201,15 @@ nav ul.func-menu .dropdown-menu .menu-bottom {
     align-items: center;
 }
 
+nav ul.func-menu .dropdown-menu .menu-bottom a {
+    padding: 0;
+}
+
+nav ul.func-menu .dropdown-menu .menu-bottom a:hover {
+    border-bottom: 1px solid black;
+}
+
+
 nav ul.func-menu li.all-mis .overlay {
     display: none;
 }

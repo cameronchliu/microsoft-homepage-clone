@@ -53,9 +53,6 @@
      }
 
      .stop {
-       background-color: black;
-       width: 20px;
-       height: 20px;
        position: absolute;
        top: 94%;
        left: 45%;
@@ -63,8 +60,8 @@
        z-index: 19;
      }
 
+  
      .play {
-       background-color: red;
        width: 20px;
        height: 20px;
        position: absolute;
