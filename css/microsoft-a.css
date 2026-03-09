@@ -188,7 +188,7 @@ nav ul.func-menu .dropdown-menu .menu-top a:focus span {
     border-bottom: 1px solid black;
 }
 
-nav ul.func-menu .dropdown-menu .menu-top h4 {
+nav ul.func-menu .dropdown-menu .menu-top li h4 {
     padding-left: 8px;
 }
 
@@ -650,7 +650,7 @@ footer .footer-menu ul li {
     padding-top: 3px;
 }
 
-footer .footer-menu ul h4 {
+footer .footer-menu ul li h4 {
     padding-top: 10px;
     padding-left: 8px;
     height: 5px;
