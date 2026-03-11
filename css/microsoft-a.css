@@ -311,18 +311,14 @@ main section {
     text-decoration: underline;
 }
 
-/* 4. 響應式處理（非常重要） */
 @media (max-width: 860px) {
 
-    /* 在平板或手機上，通常會讓卡片橫跨 100% 或置中 */
     .hero-content-card {
         position: static;
-        /* 取消絕對定位 */
         transform: none;
         max-width: 100%;
         padding: 30px 15px;
         background-color: #f2f2f2;
-        /* 與微軟官方風格一致，手機版文字排在圖下 */
         box-shadow: none;
     }
 }
@@ -579,23 +575,40 @@ section.others .attention a:focus span {
 .sticky-area {
     /* background-color: pink; */
     width: 130px;
-    height: 1450px;
+    height: 1700px;
     position: absolute;
-    top: 170%;
-    right:50px;
+    top: 180%;
+    right: 16px;
+}
+
+@media (max-width:1083px) {
+    .sticky-area {
+        height: 2800px;
+        position: absolute;
+        top: 180%;
+        right: 16px;
+    }
 }
 
 .go-top {
-text-align: center;
-font-weight: bold;
+    text-align: center;
+    font-weight: bold;
     position: sticky;
     background-color: #d9d9d9;
     color: black;
-    padding: 10px;
+    padding: 8px 4px;
+    padding-left: 0px;
     position: sticky;
-    top: calc(100vh - 100px);
-    right: 100px;
+    top: calc(100vh - 60px);
+    right: 0px;
 }
+
+@media (max-width:539px) {
+    .go-top {
+        visibility: hidden;
+    }
+}
+
 
 footer {
     background: #f2f2f2;
